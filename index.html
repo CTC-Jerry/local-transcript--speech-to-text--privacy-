@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Local Transcript</title>
+  <style>
+    :root { --text: #0f172a; --muted: #475569; --border: #e2e8f0; --bg: #fff; --surface: #f8fafc; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e2e8f0; --muted: #94a3b8; --border: #334155; --bg: #0f172a; --surface: #1e293b; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+    }
+    header h1 { margin: 0; font-size: 20px; }
+    header p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h2 { font-size: 18px; margin: 36px 0 10px; }
+    p, ul { margin: 0 0 16px; }
+    ul { padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    .highlight {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-weight: 600;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Local Transcript — Privacy Policy</h1>
+    <p>Last updated: October 2026</p>
+  </header>
+  <main>
+    <div class="highlight">
+      Local Transcript processes all audio entirely on your own computer.
+      No audio, transcript text, or any other personal data is ever sent to any server.
+    </div>
+
+    <h2>What Local Transcript does</h2>
+    <p>
+      Local Transcript is a Chrome extension that transcribes the audio playing in a browser tab
+      using a speech recognition model that runs locally on your device. The transcript is saved
+      to a text file you choose on your own computer.
+    </p>
+
+    <h2>Data we collect</h2>
+    <p>Local Transcript does not collect any data. Specifically:</p>
+    <ul>
+      <li>
+        <strong>Audio:</strong> The audio from the tab you choose to transcribe is captured,
+        processed by the on-device speech model, and then discarded. It is never stored permanently
+        and never transmitted to any server or third party.
+      </li>
+      <li>
+        <strong>Transcript text:</strong> The transcript is written to a text file on your computer
+        at the location you choose. It is never sent anywhere outside your device.
+      </li>
+      <li>
+        <strong>Preferences:</strong> Your settings (such as whether timestamps are enabled) are
+        stored locally in your browser using Chrome's built-in storage. They never leave your device.
+      </li>
+      <li>
+        <strong>Usage data:</strong> No usage analytics, crash reports, or telemetry of any kind
+        are collected.
+      </li>
+    </ul>
+
+    <h2>Permissions used and why</h2>
+    <ul>
+      <li>
+        <strong>tabCapture:</strong> To capture the audio playing in the browser tab you want to
+        transcribe. Audio is processed locally and immediately discarded after transcription.
+      </li>
+      <li>
+        <strong>offscreen:</strong> To run the speech recognition model in a background page so
+        it can work while you use other parts of the browser normally.
+      </li>
+      <li>
+        <strong>sidePanel:</strong> To display the live transcript in a panel alongside the page
+        you are watching.
+      </li>
+      <li>
+        <strong>storage:</strong> To remember your preferences (such as the timestamps setting)
+        between browser sessions. No personal data is stored.
+      </li>
+      <li>
+        <strong>activeTab:</strong> To obtain permission to capture audio from the currently active
+        tab when you press Start. This permission is granted only for the tab you explicitly
+        activate it on.
+      </li>
+      <li>
+        <strong>scripting:</strong> To inject a small script into the tab being captured so the
+        extension can detect when media playback ends and automatically stop the recording.
+      </li>
+      <li>
+        <strong>alarms:</strong> To free up the memory used by the speech recognition model
+        (several hundred MB) after a period of inactivity, and reload it when needed again.
+      </li>
+    </ul>
+
+    <h2>Third-party services</h2>
+    <p>
+      Local Transcript does not communicate with any external service. The speech recognition
+      model (OpenAI Whisper, whisper-base.en) is bundled inside the extension and runs entirely
+      on your device using your browser's built-in WebAssembly and WebGPU capabilities.
+    </p>
+    <p>
+      If you have enabled the optional ad slot, an advertisement may be loaded from a third-party
+      ad provider. The ad runs in a sandboxed iframe with no access to the extension, the tab
+      being captured, or any transcript. Please refer to the ad provider's own privacy policy
+      for information about how they handle data.
+    </p>
+
+    <h2>Children's privacy</h2>
+    <p>
+      Local Transcript does not knowingly collect any information from children under the age of 13.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy changes, the updated version will be posted at this URL with a revised
+      "Last updated" date.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      If you have any questions about this privacy policy, please open an issue on the
+      extension's GitHub repository or contact the developer directly.
+    </p>
+  </main>
+  <footer>
+    Local Transcript · Privacy Policy · All audio processing is done on your device.
+  </footer>
+</body>
+</html>
